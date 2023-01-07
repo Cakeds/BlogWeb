@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+    <title>게시판</title>
+</head>
+<body>
+    <h1>피파모바일</h1>
+    <a href="/">게시판</a>
+    <ol>
+        {% for doc in docs %}
+        <li><a href="/read/{{doc['id']}}/">{{doc['title']}}</a></li>
+        {% endfor %}
+    </ol>
+     <form action="/create/" method="POST">
+    <p><input type="text" name="title" placeholder="제목"></p>
+    <p><textarea name="content" style="width: 704px; height: 356px;"></textarea></p>
+    <p><input type="submit" value="작성"></p>
+</form>
+
+</body></html>
