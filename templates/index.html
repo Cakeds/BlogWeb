@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+    <title>게시판</title>
+</head>
+<body>
+    <h1>피파모바일</h1>
+    <a href="/">게시판</a>
+    <ol>
+        <!-- (% for doc in docs %)
+        <li><a href="/read/1/">손흥민 폼 미쳤다</a>
+       </li><li><a href="/read/6/">김민재 굉장하다</a></li>
+           <li><a href="/read/7/">중요한건 꺾이지 않는 마음</a></li>
+        -->
+        {% for doc in docs %}
+        <li><a href="/read/{{doc['id']}}/">{{doc['title']}}</a></li>
+        {% endfor %}
+    </ol>
+    <ul><li><a href="/create/">글쓰기</a></li></ul>
+</body></html>
